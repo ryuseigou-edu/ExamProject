@@ -3,7 +3,7 @@ public abstract class Character implements Creature {
     private int hp;
     public Character(final String name, final int hp) {
         this.name = name;
-        if(this.getHp() >= 0) {
+        if(hp >= 0) {
             this.setHp(hp);
         } else {
             throw new IllegalArgumentException
