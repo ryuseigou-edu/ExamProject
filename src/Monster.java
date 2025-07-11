@@ -20,7 +20,7 @@ public abstract class Monster implements Creature {
     @Override
     public void showStatus() {
         System.out.println
-                (this.getName() + this.getSuffix() + ":HP" + this.getHp());
+                (this.getName() + this.getSuffix() + "：HP " + this.getHp());
     }
 
     @Override

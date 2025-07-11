@@ -35,5 +35,39 @@ public class GameMaster {
                 monster.attack(character);
             }
         }
+        System.out.println();
+
+        //スーパーヒーロー進化
+        party.set(0, new SuperHero((Hero) party.get(0)));
+        for (Monster monster : monsters) {
+            party.get(0).attack(monster);
+        }
+
+        System.out.println("---味方パーティ最終ステータス---");
+        for (Character character : party) {
+            character.showStatus();
+
+            String isAlive;
+            if(character.isAlive()){
+                isAlive = "生存";
+            } else {
+                isAlive = "戦闘不能";
+            }
+            System.out.println("生存状況：" + isAlive);
+        }
+
+        System.out.println();
+        System.out.println("---敵グループ最終ステータス---");
+        for (Monster monster : monsters) {
+            monster.showStatus();
+
+            String isAlive;
+            if(monster.isAlive()){
+                isAlive = "生存";
+            } else {
+                isAlive = "討伐済み";
+            }
+            System.out.println("生存状況：" + isAlive);
+        }
     }
 }

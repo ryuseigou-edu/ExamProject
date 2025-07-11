@@ -18,7 +18,7 @@ public abstract class Character implements Creature {
     @Override
     public void showStatus(){
         System.out.println
-                (this.getName() + ":HP" + this.getHp());
+                (this.getName() + "：HP " + this.getHp());
     }
 
     @Override
