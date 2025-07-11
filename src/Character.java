@@ -31,11 +31,6 @@ public abstract class Character implements Creature {
     }
     @Override
     public void setHp(int hp) {
-        if(hp >= 0) {
-            this.hp = hp;
-        } else {
-            throw new IllegalArgumentException
-                    ("HPは0以上を入力してください");
-        }
+        this.hp = Math.max(hp, 0);
     }
 }

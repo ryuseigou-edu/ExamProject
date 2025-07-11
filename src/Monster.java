@@ -39,6 +39,6 @@ public abstract class Monster implements Creature {
     }
     @Override
     public void setHp(final int hp) {
-        this.hp = hp;
+        this.hp = Math.max(hp, 0);
     }
 }

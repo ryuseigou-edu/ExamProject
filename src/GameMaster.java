@@ -42,6 +42,7 @@ public class GameMaster {
         for (Monster monster : monsters) {
             party.get(0).attack(monster);
         }
+        System.out.println();
 
         System.out.println("---味方パーティ最終ステータス---");
         for (Character character : party) {
