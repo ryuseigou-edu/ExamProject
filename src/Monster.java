@@ -1,11 +1,11 @@
 public abstract class Monster implements Creature {
-    private String name;
+    private final String name;
     private int hp;
     private final char suffix;
     private static final String ERROR_MESSAGE = "初期設定に誤りがあるため、キャラクターを作成できませんでした";
 
     public Monster(final String name, final int hp, final char suffix) {
-        setName(name);
+        this.name = name;
         if(hp >= 0) {
             setHp(hp);
         } else {
@@ -35,9 +35,6 @@ public abstract class Monster implements Creature {
     }
     public char getSuffix() {
         return this.suffix;
-    }
-    public void setName(final String name) {
-        this.name = name;
     }
     @Override
     public void setHp(final int hp) {
