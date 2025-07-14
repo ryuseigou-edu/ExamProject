@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class GameMaster {
     public static void main(String[] args) {
         //party init
-        ArrayList<Character> party = new ArrayList<Character>();
+        ArrayList<Character> party = new ArrayList<>();
         Hero hero = new Hero("勇者", 100, "剣");
         Wizard wizard = new Wizard("魔法使い", 60, 10);
         Thief thief = new Thief("盗賊", 70);
@@ -12,7 +12,7 @@ public class GameMaster {
         party.add(thief);
 
         //monsters init
-        ArrayList<Monster> monsters = new ArrayList<Monster>();
+        ArrayList<Monster> monsters = new ArrayList<>();
         Matango matango = new Matango("お化けキノコ", 45, 'A');
         Goblin goblin = new Goblin("ゴブリン", 50, 'A');
         Slime slime = new Slime("スライム", 40, 'A');
