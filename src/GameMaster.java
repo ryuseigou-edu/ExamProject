@@ -38,9 +38,17 @@ public class GameMaster {
         System.out.println();
 
         //スーパーヒーロー進化
-        party.set(0, new SuperHero((Hero) party.get(0)));
+        int heroIndex = -1;
+        for (int i = 0; i < party.size(); i++) {
+            if(party.get(i) instanceof Hero){
+                heroIndex = i;
+                break;
+            }
+        }
+
+        party.set(heroIndex, new SuperHero((Hero) party.get(heroIndex)));
         for (Monster monster : monsters) {
-            party.get(0).attack(monster);
+            party.get(heroIndex).attack(monster);
         }
         System.out.println();
 
