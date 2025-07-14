@@ -26,18 +26,18 @@ public abstract class Monster implements Creature {
     }
 
     @Override
+    public String getName() {
+        return this.name;
+    }
+    @Override
     public int getHp() {
         return this.hp;
     }
     @Override
-    public String getName() {
-        return this.name;
+    public void setHp(final int hp) {
+        this.hp = Math.max(hp, 0);
     }
     public char getSuffix() {
         return this.suffix;
-    }
-    @Override
-    public void setHp(final int hp) {
-        this.hp = Math.max(hp, 0);
     }
 }
