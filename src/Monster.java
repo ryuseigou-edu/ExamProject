@@ -16,7 +16,7 @@ public abstract class Monster implements Creature {
     }
 
     @Override
-    public boolean isAlive() {
+    public final boolean isAlive() {
         return hp > 0;
     }
     @Override
