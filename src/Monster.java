@@ -2,6 +2,7 @@ public abstract class Monster implements Creature {
     private String name;
     private int hp;
     private final char suffix;
+    private static final String ERROR_MESSAGE = "初期設定に誤りがあるため、キャラクターを作成できませんでした";
 
     public Monster(final String name, final int hp, final char suffix) {
         setName(name);
@@ -9,7 +10,7 @@ public abstract class Monster implements Creature {
             setHp(hp);
         } else {
             throw new IllegalArgumentException
-                    ("初期設定に誤りがあるため、キャラクターを作成できませんでした");
+                    (ERROR_MESSAGE);
         }
         this.suffix = suffix;
     }
