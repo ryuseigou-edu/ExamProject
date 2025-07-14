@@ -10,9 +10,9 @@ public class GameMaster {
 
         //monsters init
         ArrayList<Monster> monsters = new ArrayList<Monster>();
-        monsters.add(new Matango(45, 'A'));
-        monsters.add(new Goblin(50, 'A'));
-        monsters.add(new Slime(40, 'A'));
+        monsters.add(new Matango("お化けキノコ", 45, 'A'));
+        monsters.add(new Goblin("ゴブリン", 50, 'A'));
+        monsters.add(new Slime("スライム", 40, 'A'));
 
         System.out.println("---味方パーティー---");
         party.forEach(Character::showStatus);

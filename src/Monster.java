@@ -3,7 +3,8 @@ public abstract class Monster implements Creature {
     private int hp;
     private final char suffix;
 
-    public Monster(final int hp, final char suffix) {
+    public Monster(final String name, final int hp, final char suffix) {
+        setName(name);
         if(hp >= 0) {
             setHp(hp);
         } else {
