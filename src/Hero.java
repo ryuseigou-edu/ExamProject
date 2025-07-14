@@ -1,5 +1,5 @@
 public class Hero extends Character {
-    private String weapon;
+    private final String weapon;
 
     public Hero(final String name, final int hp, final String weapon) {
         super(name,hp);
@@ -15,8 +15,5 @@ public class Hero extends Character {
 
     public String getWeapon() {
         return this.weapon;
-    }
-    public void setWeapon(final String weapon) {
-        this.weapon = weapon;
     }
 }
