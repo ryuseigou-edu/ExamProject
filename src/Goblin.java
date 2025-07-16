@@ -1,6 +1,6 @@
 public class Goblin extends Monster {
-    public Goblin(final String name, final int hp, final char suffix) {
-        super(name, hp, suffix);
+    public Goblin(final int hp, final char suffix) {
+        super("ゴブリン", hp, suffix);
     }
 
     @Override

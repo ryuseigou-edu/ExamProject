@@ -1,6 +1,6 @@
 public final class Slime extends Monster {
-    public Slime(final String name, final int hp, final char suffix) {
-        super(name, hp, suffix);
+    public Slime(final int hp, final char suffix) {
+        super("スライム", hp, suffix);
     }
 
     @Override
